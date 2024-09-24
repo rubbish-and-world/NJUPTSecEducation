@@ -52,7 +52,7 @@ def getQuestionList(id) -> list: # return list of questionAnswers
     questionList =  received['result']
     if questionList:
         for question in questionList:
-            res.append(questinAnswer(question['id'] , question['courseId'] , question['correctAnswer'] if len(question['correctAnswer'])==1 else question['correctAnswer'].split()) )
+            res.append(questinAnswer(question['id'] , question['courseId'] , question['correctAnswer'] if len(question['correctAnswer'])==1 else question['correctAnswer'].split(',')) )
     return res
 
     
