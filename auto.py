@@ -1,7 +1,7 @@
 import json as j
 import requests as r
 
-# This json is for 准入资格C类, if you have a different course, get your own json file from http://10.22.192.38:9092/students/courseList
+# This json is for '准入资格C类', if you have a different course, get your own json file from http://10.xxx.xxx.xxx:9092/students/courseList
 
 # get course IDs
 f = open("courseList.json" ,"rt" , encoding='utf-8')
@@ -12,18 +12,18 @@ for lecture in allCourse:
 f.close()
 
 
-url = "http://10.22.192.38:9090/jeecg-boot/jcedutec/courseSource/finish"
+url = "http://10.xxx.xxx.xxx:9090/jeecg-boot/jcedutec/courseSource/finish"
 
-questionURL = "http://10.22.192.38:9090/jeecg-boot/jcedutec/courseSource/queryCourseQuestionRelaByMainId?id="
+questionURL = "http://10.xxx.xxx.xxx:9090/jeecg-boot/jcedutec/courseSource/queryCourseQuestionRelaByMainId?id="
 
-submitURL = "http://10.22.192.38:9090/jeecg-boot/jcedutec/courseSource/submitAnswer"
+submitURL = "http://10.xxx.xxx.xxx:9090/jeecg-boot/jcedutec/courseSource/submitAnswer"
 
 headers = {
 "Accept":"application/json, text/plain, */*",
 "Accept-Encoding":"gzip, deflate",
 "Accept-Language":"en,zh-CN;q=0.9,zh;q=0.8",
-"Origin":"http://10.22.192.38:9092",
-"Referer":"http://10.22.192.38:9092/",
+"Origin":"http://10.xxx.xxx.xxx:9092",
+"Referer":"http://10.xxx.xxx.xxx:9092/",
 "X-Access-Token":"===========================================", # Fill your own token here
 "X-Sign":"==================================================", # Fill your own sign here
 "X-TIMESTAMP":"1727160689408", # Fill your own timestamp (optional)
